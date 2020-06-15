@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', 'loadjs');
 function register_widget_areas() {
     register_sidebar( array(
         'name'          => 'Footer',
-        'id'            => 'footer',
+        'id'            => 'footer-area',
         'description'   => 'This is footer',
         'before_widget' => '<section class="footer">',
         'after_widget'  => '</section>',

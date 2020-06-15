@@ -1,7 +1,6 @@
-<?php get_header(); ?>
+<?php /* Template Name: WeatherProPageTemplate */ ?>
 
 <?php get_header(); ?>
-
 <header>
     <h1><?php the_title(); ?></h1>
     
@@ -45,20 +44,9 @@
                 echo "</div>";
                 
             }
-        } else {
-            echo "<p>Käy lisäämässä uusi 'Sijainnit'-custom post type.</p>";
         }
         ?>
 
     </div>
 </header>
-<?php if ( ! dynamic_sidebar( 'footer-area' ) ) : ?>
-  <section class="footer">
-      <h2>Contact us</h2>
-      <p>Weather Pro</p>
-      <p>Randomstreet 9</p>
-      <p>40100 Jyväskylä</p>
-  </section>
-<?php endif; ?>
-
 <?php get_footer(); ?>
