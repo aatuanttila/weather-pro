@@ -45,7 +45,7 @@ add_action( 'init', 'create_posttype');
 function add_sijainnit_metaboxes() {
 	add_meta_box(
 		'sijainti_koordinaatti',
-		'Sijainti koordinaatti',
+		'Sijainti koordinaatti (muodossa: 62.2398897, 25.739983)',
         'sijainti_koordinaatti', 		
         'sijainnit',
 		'side',
