@@ -1,0 +1,37 @@
+/*
+Theme Name: Weather Pro Theme
+Author: Aatu Anttila
+*/
+$font-stack:    'Rubik', sans-serif;
+$color1: #00CEFF;
+$color2: #142AD3;
+$color3: #000033;
+$light-color: #F7F7F7;
+$color5: #464646;
+$color6: #2136D5;
+$color7: #182DD1;
+$color8: #212121;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  div {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: left;
+  }
+  background-image: linear-gradient($color1, $color2);
+  min-height: 300px;
+  width: 100%;
+  font: 100% $font-stack;
+  color: $light-color; 
+}
