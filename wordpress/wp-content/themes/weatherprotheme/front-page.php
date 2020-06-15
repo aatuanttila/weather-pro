@@ -17,15 +17,7 @@
             'post_type' => 'sijainnit',
 
         );
-        $args2 = array(
-            'post_type' => 'sijainnit',
-            'meta_key' => 'sijainti_koordinaatti',
-            'meta_query' => array(
-                array(
-                    'key' => 'sijainti_koordinaatti'
-                )
-            )
-        );
+
         $the_query = new WP_Query($args);
 
         if ( $the_query->have_posts()) {
@@ -45,7 +37,6 @@
                 
             }
         }
-        //$wp_reset_postdata();
         ?>
 
     </div>
