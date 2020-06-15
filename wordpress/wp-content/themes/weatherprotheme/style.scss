@@ -3,35 +3,63 @@ Theme Name: Weather Pro Theme
 Author: Aatu Anttila
 */
 $font-stack:    'Rubik', sans-serif;
-$color1: #00CEFF;
-$color2: #142AD3;
-$color3: #000033;
-$light-color: #F7F7F7;
-$color5: #464646;
-$color6: #2136D5;
-$color7: #182DD1;
-$color8: #212121;
+$color1:        #00CEFF;
+$color2:        #142AD3;
+$color3:        #000033;
+$light-color:   #F7F7F7;
+$color5:        #070707;
+$color6:        #2136D5;
+$color7:        #182DD1;
+$color8:        #212121;
 
 body {
   margin: 0;
   padding: 0;
+  font: 125% $font-stack;
+  color: $light-color; 
+  h1 {
+    font-size: 300%;
+  }
 }
 
 header {
+  padding-top: 5em;
+  padding-bottom: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   div {
-      width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .weather_container {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
-      align-items: left;
+      justify-content: center;
+      align-items: center;
+    }
   }
   background-image: linear-gradient($color1, $color2);
   min-height: 300px;
   width: 100%;
-  font: 100% $font-stack;
-  color: $light-color; 
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+  text-align: center;
+  background-color: $light-color;
+  h2 {
+    color: $color7;
+  }
+  color: $color5;
+  position: relative;
+  bottom: 0;
+  left: 0;
 }

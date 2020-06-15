@@ -12,6 +12,19 @@ function loadjs() {
 }
 add_action('wp_enqueue_scripts', 'loadjs');
 
+function register_widget_areas() {
+    register_sidebar( array(
+        'name'          => 'Footer',
+        'id'            => 'footer',
+        'description'   => 'This is footer',
+        'before_widget' => '<section class="footer">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
+    ));
+}
+add_action( 'widgets_init', 'register_widget_areas' );
+
 function create_posttype() {
     register_post_type( 'sijainnit',
         array(
@@ -54,7 +67,6 @@ function sijainti_koordinaatti() {
 
 	// Output the field
 	echo '<input type="text" name="sijainti_koordinaatti" value="' . esc_textarea( $sijainti_koordinaatti )  . '" class="widefat">';
-
 }
 
 /**

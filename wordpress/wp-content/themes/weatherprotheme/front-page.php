@@ -15,7 +15,6 @@
         <?php 
         $args = array(
             'post_type' => 'sijainnit',
-
         );
 
         $the_query = new WP_Query($args);
@@ -32,8 +31,16 @@
                 $response = file_get_contents($url);
                 $response = json_decode($response, true);
 
-                echo $response["currently"]["temperature"]; // ["data"]["currently"]["temperature"]
-                echo "<p>" . get_the_title() ."<br>". $coordinates . "</p>";
+                $weather_now = $response["currently"]["temperature"];
+                $weather_tmrw =  $response["daily"]["data"][1]["temperatureHigh"];
+                $weather_day_after_tmrw = $response["daily"]["data"][2]["temperatureHigh"];
+
+                echo "<div>";
+                    echo "<h3>" . get_the_title() . "</h3>";
+                    echo "<div class='weather_container'>";
+                        echo "<p>Nyt: " . $weather_now  . "</p></p>Huomenna: " . $weather_tmrw . "</p><p>Ylih.: " . $weather_day_after_tmrw . "</p>";
+                    echo "</div>";
+                echo "</div>";
                 
             }
         }
@@ -41,5 +48,4 @@
 
     </div>
 </header>
-
 <?php get_footer(); ?>
