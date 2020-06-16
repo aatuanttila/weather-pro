@@ -6,10 +6,6 @@
     <div>
 
         <?php 
-/*             echo '<pre>';
-            print_r(get_field('background_image'));
-            echo '</pre>';
-            die(); */
             $catchphrase = get_field('catchphrase');
             $title = get_field('title');
             $windy_text = get_field('windy_text');
