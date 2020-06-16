@@ -9,7 +9,7 @@
 4. Settings -> Reading -> Your homepage displays ->  A static page (select below) -> Homepage: Weather Pro
 5. Custom Fields -> Sync available -> "Section"-field group -> Sync
 6. Section Field group -> Location -> Rules -> Show this field group if Page is equal to Weather Pro
-7. Pages -> Weather Pro -> Edit -> 
+7. Pages -> Weather Pro -> Edit -> Add contents
 8. Widgets -> Footer
 9. Sijainnit -> Add new
 
