@@ -2,9 +2,7 @@
 
 <header>
     <h1><?php the_title(); ?></h1>
-    
     <div>
-
         <?php 
             if (get_fields()) {
                 $catchphrase = get_field('catchphrase');
@@ -18,7 +16,6 @@
                 die();
             }
         ?>
-
         <?php 
         $args = array(
             'post_type' => 'sijainnit',
@@ -72,6 +69,7 @@
             echo "<p>Käy lisäämässä uusi 'Sijainnit'-custom post type.</p>";
         }
         ?>
+
     </div>
 </header>
 
@@ -90,7 +88,7 @@
     </div>
 </section>
 
-<section class="windy-section" style="background-image: url(<?php echo $background_image['url'];  ?>)">
+<section class="windy-section" style="background-image: url(<?php echo $background_image['url']; ?>)">
     <div>    
         <h1><?php echo $windy_text; ?></h1>
         <a
@@ -102,5 +100,14 @@
         </a>
     </div>
 </section>
+
+<?php if ( ! dynamic_sidebar( 'footer-area' ) ) : ?>
+  <section class="footer">
+      <h2>Contact us</h2>
+      <p>Weather Pro<br>
+      Randomstreet 9<br>
+      40100 Jyväskylä</p>
+  </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>
