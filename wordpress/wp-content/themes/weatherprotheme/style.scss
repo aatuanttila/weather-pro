@@ -45,6 +45,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    img {
+      height: 35px;
+      width: 35px;
+    }
     .weather_container {
       width: 100%;
       display: flex;
@@ -63,12 +67,17 @@ header {
 }
 
 .info-section {
-
+  a {
+    background-image: linear-gradient(to left, $blue, $cyan);
+  }
   h2 {
     color: $blue-header-color;
   }
 }
 .windy-section {
+  a {
+    border: 2px solid $light-color;
+  }
   div {
     padding-top: 5em;
     padding-bottom: 5em;
@@ -80,6 +89,18 @@ header {
   }
   color: $light-color;
 }
+
+section {
+  a {
+    font-size: 80%;
+    font-weight: 900;
+    padding: 0.7em 2.5em 0.7em 2.5em;
+    border-radius: 15px;
+    color: $light-color;
+    text-decoration: none;
+  }
+}
+
 
 .footer {
   text-align: center;

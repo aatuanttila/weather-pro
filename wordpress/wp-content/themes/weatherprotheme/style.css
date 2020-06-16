@@ -34,6 +34,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    header div img {
+      height: 35px;
+      width: 35px; }
     header div .weather_container {
       width: 100%;
       display: flex;
@@ -44,11 +47,15 @@ header {
       header div .weather_container p {
         width: 100%; }
 
+.info-section a {
+  background-image: linear-gradient(to left, #142AD3, #00CEFF); }
 .info-section h2 {
   color: #182DD1; }
 
 .windy-section {
   color: #F7F7F7; }
+  .windy-section a {
+    border: 2px solid #F7F7F7; }
   .windy-section div {
     padding-top: 5em;
     padding-bottom: 5em;
@@ -57,6 +64,14 @@ header {
     background-image: linear-gradient(to right, #142AD3, #00CEFF);
     opacity: 0.85;
     z-index: 100; }
+
+section a {
+  font-size: 80%;
+  font-weight: 900;
+  padding: 0.7em 2.5em 0.7em 2.5em;
+  border-radius: 15px;
+  color: #F7F7F7;
+  text-decoration: none; }
 
 .footer {
   text-align: center;
