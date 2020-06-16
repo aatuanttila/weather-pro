@@ -51,6 +51,8 @@ header {
   background-image: linear-gradient(to left, #142AD3, #00CEFF); }
 .info-section h2 {
   color: #182DD1; }
+.info-section h3 {
+  font-size: 80%; }
 
 .windy-section {
   color: #F7F7F7; }
