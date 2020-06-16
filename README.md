@@ -1,6 +1,7 @@
 # Weather Pro Theme Setup
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/84p7mn2bMo4/0.jpg)](http://www.youtube.com/watch?v=Y84p7mn2bMo4 "Weather Pro Theme Setup Guide")
+## Setup video
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/84p7mn2bMo4/0.jpg)](http://www.youtube.com/watch?v=84p7mn2bMo4 "Weather Pro Theme Setup Guide")
 
 1. Select theme
 2. Install Advanced Custom Fields -plugin
