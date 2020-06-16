@@ -32,6 +32,6 @@ Randomstreet 9
 
 40100 Jyväskylä
 
-Digitoimisto Dude   		 62.2398897, 25.739983
-Rauman Linja-Autoasema   	 61.13137, 21.5023918
+Digitoimisto Dude   		 62.2398897, 25.739983<br>
+Rauman Linja-Autoasema   	 61.13137, 21.5023918<br>
 Kittilän lentoasema   		 67.6949862, 24.848486
