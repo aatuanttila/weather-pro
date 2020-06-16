@@ -13,7 +13,7 @@
 8. Widgets -> Footer
 9. Sijainnit -> Add new
 
-## Contents:
+## Contents
 
 IT AIN'T ALWAYS SUNNY
 
