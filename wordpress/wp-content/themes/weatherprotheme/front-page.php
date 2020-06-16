@@ -6,12 +6,16 @@
     <div>
 
         <?php 
-            $catchphrase = get_field('catchphrase');
-            $title = get_field('title');
-            $windy_text = get_field('windy_text');
-            $text_field = get_field('text_field');
-            $button = get_field('button');
-            $background_image = get_field('background_image');
+            if (get_fields()) {
+                $catchphrase = get_field('catchphrase');
+                $title = get_field('title');
+                $windy_text = get_field('windy_text');
+                $text_field = get_field('text_field');
+                $button = get_field('button');
+                $background_image = get_field('background_image');
+            } else {
+                echo "Install Advanced Custom Fields Plugin."
+            }
         ?>
 
         <?php 
