@@ -6,17 +6,25 @@ body {
   margin: 0;
   padding: 0;
   font: 125% "Rubik", sans-serif;
-  color: #F7F7F7; }
+  background-color: #F7F7F7;
+  color: #070707; }
   body h1 {
     font-size: 300%; }
 
-header {
-  padding-top: 5em;
-  padding-bottom: 5em;
+header, section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center; }
+
+header, .info-section {
+  padding-top: 5em;
+  padding-bottom: 5em; }
+
+header {
+  color: #F7F7F7;
   background-image: linear-gradient(#00CEFF, #142AD3);
   min-height: 300px;
   width: 100%; }
@@ -27,36 +35,68 @@ header {
     justify-content: center;
     align-items: center; }
     header div .weather_container {
-      width: 30%;
+      width: 100%;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
-      text-align: center; }
+      align-items: center; }
       header div .weather_container p {
-        width: 30%; }
+        width: 100%; }
+
+.info-section h2 {
+  color: #182DD1; }
+
+.windy-section {
+  color: #F7F7F7; }
+  .windy-section div {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #142AD3, #00CEFF);
+    opacity: 0.85;
+    z-index: 100; }
 
 .footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
-  background-color: #F7F7F7;
-  color: #070707;
   position: relative;
   bottom: 0;
   left: 0; }
   .footer h2 {
     color: #182DD1; }
+  .footer p {
+    font-size: 85%; }
 
-.info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #F7F7F7;
-  color: #070707; }
+/* Tablet Styles */
+@media only screen and (min-width: 576px) and (max-width: 1239px) {
+  header div .weather_container {
+    width: 80%; }
+    header div .weather_container p {
+      width: 30%; }
+
+  .info-section div {
+    padding-left: 10%;
+    padding-right: 10%; }
+
+  .windy-section div {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%; } }
+/* Desktop Styles */
+@media only screen and (min-width: 1240px) {
+  header div .weather_container {
+    width: 40%; }
+    header div .weather_container p {
+      width: 30%; }
+
+  .info-section div {
+    padding-left: 30%;
+    padding-right: 30%; }
+
+  .windy-section div {
+    width: 40%;
+    padding-left: 30%;
+    padding-right: 30%; } }
 
 /*# sourceMappingURL=style.css.map */

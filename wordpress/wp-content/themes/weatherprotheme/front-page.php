@@ -1,17 +1,21 @@
 <?php get_header(); ?>
 
-<?php get_header(); ?>
-
 <header>
     <h1><?php the_title(); ?></h1>
     
     <div>
 
         <?php 
-        /* if (have_posts()) : while(have_posts()) : the_post();
-            the_content(); 
-            endwhile; 
-            endif; */ 
+/*             echo '<pre>';
+            print_r(get_field('background_image'));
+            echo '</pre>';
+            die(); */
+            $catchphrase = get_field('catchphrase');
+            $title = get_field('title');
+            $windy_text = get_field('windy_text');
+            $text_field = get_field('text_field');
+            $button = get_field('button');
+            $background_image = get_field('background_image');
         ?>
 
         <?php 
@@ -66,25 +70,33 @@
     </div>
 </header>
 
-<section class="info">
-    <?php
+<section class="info-section">
+    <div>
+        <h3><?php echo $catchphrase; ?></h3>
+        <h2><?php echo $title; ?></h2>
+        <p><?php echo $text_field; ?></p>
+        <a
+        role="button"
+        href="<?php echo $button['url']; ?>"
+        target="<?php echo $button['target']; ?>"
+        >
+        <?php echo $button['title']; ?>
+        </a>
+    </div>
+</section>
 
-        $field = get_field('title');
-        echo $field;
-
-    ?>
-    <h4>Hello world</h4>
-    <h4><?php the_field('catchphrase'); ?></h4>
-    <h3><?php the_field('subtitle'); ?></h3>
-
+<section class="windy-section" style="background-image: url(<?php echo $background_image['url'];  ?>)">
+    <div>    
+        <h1><?php echo $windy_text; ?></h1>
+    </div>
 </section>
 
 <?php if ( ! dynamic_sidebar( 'footer-area' ) ) : ?>
   <section class="footer">
       <h2>Contact us</h2>
-      <p>Weather Pro</p>
-      <p>Randomstreet 9</p>
-      <p>40100 Jyväskylä</p>
+      <p>Weather Pro<br>
+      Randomstreet 9<br>
+      40100 Jyväskylä</p>
   </section>
 <?php endif; ?>
 

@@ -2,33 +2,43 @@
 Theme Name: Weather Pro Theme
 Author: Aatu Anttila
 */
-$font-stack:    'Rubik', sans-serif;
-$color1:        #00CEFF;
-$color2:        #142AD3;
-$color3:        #000033;
-$light-color:   #F7F7F7;
-$color5:        #070707;
-$color6:        #2136D5;
-$color7:        #182DD1;
-$color8:        #212121;
+$font-stack:        'Rubik', sans-serif;
+$cyan:              #00CEFF;
+$blue:              #142AD3;
+$darkblue:          #000033;
+$light-color:       #F7F7F7;
+$dark-color:        #070707;
+$blue2:             #2136D5;
+$blue-header-color: #182DD1;
+$dark-blue:         #212121;
 
 body {
   margin: 0;
   padding: 0;
   font: 125% $font-stack;
-  color: $light-color; 
+  background-color: $light-color; 
+  color: $dark-color;
   h1 {
     font-size: 300%;
   }
 }
 
-header {
-  padding-top: 5em;
-  padding-bottom: 5em;
+header, section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+header, .info-section {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+header {
+  color: $light-color;
   div {
     width: 100%;
     display: flex;
@@ -36,44 +46,104 @@ header {
     justify-content: center;
     align-items: center;
     .weather_container {
-      width: 30%;
+      width: 100%;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      text-align: center;
       p {
-        width: 30%;
+        width: 100%;
       }
     }
   }
-  background-image: linear-gradient($color1, $color2);
+  background-image: linear-gradient($cyan, $blue);
   min-height: 300px;
   width: 100%;
 }
 
-.footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  //align-items: center;
-  text-align: center;
-  background-color: $light-color;
+.info-section {
+
   h2 {
-    color: $color7;
+    color: $blue-header-color;
   }
-  color: $color5;
+}
+.windy-section {
+  div {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, $blue, $cyan);
+    opacity: 0.85;
+    z-index: 100;
+  }
+  color: $light-color;
+}
+
+.footer {
+  text-align: center;
+  h2 {
+    color: $blue-header-color;
+  }  
+  p {
+    font-size: 85%;
+  }
   position: relative;
   bottom: 0;
   left: 0;
 }
-.info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: $light-color;
-  color: $color5;
+
+/* Tablet Styles */
+@media only screen and (min-width: 576px) and (max-width: 1239px) {
+  header {
+    div {
+      .weather_container {
+        width: 80%;
+        p {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .info-section {
+    div {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+  .windy-section {
+    div {
+      width: 80%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+}
+/* Desktop Styles */
+@media only screen and (min-width: 1240px) {
+  header {
+    div {
+      .weather_container {
+        width: 40%;
+        p {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .info-section {
+    div {
+      padding-left: 30%;
+      padding-right: 30%;
+    }
+  }
+  .windy-section {
+    div {
+      width: 40%;
+      padding-left: 30%;
+      padding-right: 30%;
+    }
+  }
+
 }
