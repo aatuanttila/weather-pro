@@ -14,7 +14,8 @@
                 $button = get_field('button');
                 $background_image = get_field('background_image');
             } else {
-                echo "Install Advanced Custom Fields Plugin."
+                echo "Install Advanced Custom Fields Plugin.";
+                die();
             }
         ?>
 
